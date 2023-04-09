@@ -1,0 +1,223 @@
+#map {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+#map .ol-zoom.ol-unselectable.ol-control {
+    position: absolute;
+    right: 0.5em;
+    top: 0.5em;
+    left: unset;
+}
+
+#map .ol-zoom .ol-zoom-out {
+    margin-top: 204px;
+}
+
+#map .ol-zoomslider {
+    background-color: transparent;
+    top: 2.3em;
+    right: 0.5em;
+    left: unset;
+}
+
+#map .ol-touch .ol-zoom .ol-zoom-out {
+    margin-top: 212px;
+}
+
+#map .ol-touch .ol-zoomslider {
+    top: 2.75em;
+}
+
+#map .ol-zoom-in.ol-has-tooltip:hover[role=tooltip],
+#map .ol-zoom-in.ol-has-tooltip:focus[role=tooltip] {
+    top: 3px
+}
+
+#map .ol-zoom-out.ol-has-tooltip:hover[role=tooltip],
+#map .ol-zoom-out.ol-has-tooltip:focus[role=tooltip] {
+    top: 232px
+}
+
+#map .ol-zoom-extent {
+    top: 208px;
+}
+
+#map .ol-zoom-extent {
+    right: 0.5em;
+    left: unset;
+}
+
+#map .ol-scale-line {
+    right: 2em;
+    left: unset;
+}
+
+#mouse-position {
+    float: left;
+    position: absolute;
+    bottom: 5px;
+    left: 750px;
+    width: 200px;
+    height: 20px;
+    z-index: 2000;
+}
+
+.custom-mouse-position {
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    font-family: "微软雅黑";
+}
+
+.ToolLib {
+    position: absolute;
+    height: 100%;
+    width: 100px;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.ToolLib:hover {
+    width: 20%;
+}
+
+.ToolLib #picture {
+    width: 100%;
+    height: 60px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+#picture img {
+    width: 60px;
+    height: 60px;
+    margin-left: 20px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.ToolLib:hover #picture img {
+    margin-left: 125px;
+}
+
+.ToolLib #name {
+    width: 100%;
+    height: 75px;
+}
+
+#name p {
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 35px;
+    color: aliceblue
+}
+
+.ButtonLib {
+    width: 80%;
+    margin-left: 10px;
+    height: 40px;
+    margin-top: 10px;
+    background-color: transparent;
+    font-size: 15px;
+    font-family: '宋体';
+    color: azure;
+}
+
+.ButtonLib:hover {
+    box-shadow: 5px 2px 5px 2px rgba(255, 255, 255, 0.441);
+}
+
+.ToolLib:hover .ButtonLib {
+    margin-left: 30px;
+}
+
+.ToolLib .menu1-box {
+    position: absolute;
+    width: 20px;
+    margin-left: 20px;
+    bottom: 10px;
+    height: 20px;
+    background-color: rgb(79, 211, 211);
+    text-align: center;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.ToolLib:hover .menu1-box {
+    width: 70%;
+    height: fit-content;
+    margin-left: 40px;
+}
+
+.menu1-button {
+    width: 100%;
+    height: 20px;
+    text-align: center;
+    font-size: 15px;
+    font-family: '微软雅黑';
+}
+
+.menu1-button:hover{
+    background-color: aqua;
+}
+
+.menu1-list {
+    width: 150px;
+    height: 200px;
+    background-color: #fff;
+    border-radius: 8px;
+    list-style: none;
+    padding: 6px;
+    box-shadow: 0 0 4px 4px rgba(92, 103, 255, 0.15);
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: bottom right;
+    transition: 0.3s ease;
+    transition-delay: 0.1s;
+}
+
+.menu1-list li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    color: #1c3991;
+    cursor: pointer;
+    position: relative;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: 0.2s ease-in;
+}
+
+.menu1-list li:hover {
+    color: #5c67ff;
+}
+
+.active .menu1-list {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.active .menu1-list li {
+    opacity: 1;
+    margin-top: 5px;
+    height: 140px;
+    animation: fade-in-item 0.4s linear forwards;
+}
+
+@keyframes fade-in-item {
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
