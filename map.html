@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Openlayers</title>
+    <script src="https://cdn.jsdelivr.net/npm/ol@v7.3.0/dist/ol.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v7.3.0/ol.css">
+    <link rel="stylesheet" href="./css/map.css">
+    <script src="libs/jquery-3.6.4.js"></script>
+</head>
+
+<body>
+    <div id="map"></div>
+    <div id="mouse-position"></div>
+    <div class="ToolLib">
+        <div id="picture"><img src="./images/我的头像.jpg"></div>
+        <div id="name">
+            <p>吴晨辉</p>
+        </div>
+        <button class="ButtonLib" id="spin">旋转定位</button>
+        <button class="ButtonLib" id="elastic">弹性定位</button>
+        <button class="ButtonLib" id="bounce">反弹定位</button>
+        <button class="ButtonLib" id="rotate">围绕旋转</button>
+        <button class="ButtonLib" id="fly">飞行定位</button>
+        <div class="menu1-box">
+            <div class="menu1-button">切换到它人</div>
+            <ul class="menu1-list" style="height: 200px;">
+                <li>吴晨辉</li>
+                <li>王晓楠</li>
+                <li>贾永建</li>
+            </ul>
+        </div>
+
+    </div>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/elm-pep@1.0.6/dist/elm-pep.js"></script> -->
+    <script type="module" src="./js/动画效果.js"></script>
+    <script type="module" src="./js/列表效果.js"></script>
+
+</body>
+
+</html>
