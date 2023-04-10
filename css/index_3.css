@@ -1,44 +1,21 @@
-* {
-    margin: 0;
-    padding: 0;
-}
 
 body {
-    background-color: rgb(248, 248, 248);
+    background-color: gainsboro;
     background-repeat: no-repeat;
     background-size: contain;
 }
 
-.main {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    max-width: 1430px;
-    overflow-x: hidden;
-    transform: translateY(0px);
-    background-color: #fff;
-    transition: .3s;
-    padding: 50px;
-    border: 1px solid #000;
-}
 
-.video {
+.shell-main {
     position: relative;
-    width: 1500px;
-    height: 100vh;
+    width: 100%;
     overflow: hidden;
     background-attachment: fixed;
     background-size: 100%;
     background-repeat: no-repeat;
 }
 
-a {
-    text-decoration: none;
-}
-
-.video::after {
+.shell-main::after {
     content: '个人介绍';
     width: 500px;
     height: 200px;
@@ -57,66 +34,221 @@ a {
 
 }
 
-.top {
-    width: 100%;
-    height: 400px;
+
+.topic {
+    content: '个人介绍';
+    width: 500px;
+    height: 200px;
+    border-radius: 3px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: #fff 10px solid;
+    color: #fff;
+    letter-spacing: 30px;
+    font: 100 70px 'font';
     display: flex;
-    justify-content: space-evenly;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    align-items: center;
+    justify-content: center;
+
 }
 
-.top-middle {
-    width: 400px;
-    height: 400px;
+
+.shell-hometown-bar {
+    width: 1520px;
+    height: 650px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.shell-intro {
+    width: 90%;
+    height: 500px;
+    position: relative;
+    background-color: lightcyan;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+
+    align-items: center;
+    /* flex-direction: column; */
+    max-width: 1430px;
+    overflow-x: hidden;
+    transform: translateY(5px);
+    transition: .3s;
+    padding: 50px;
+    border: 1px solid #000;
+}
+
+.shell-intro-img {
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     background-image: url('../images/1.jpeg');
     background-size: cover;
     background-position-y: -30px;
-    margin: 0 50px;
+    margin: 10px 50px;
     border: 15px solid rgba(0, 0, 0, 0.151);
+
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
-.top-left,
-.top-right {
-    width: 400px;
-    height: 400px;
-    font-size: 22px;
-    margin-top: 30px;
-    margin: 10px;
-}
+.title-info {
+    font-family: 'Times New Roman', Times, serif;
 
-.top-left {
-    text-align: right;
-}
-
-.top p {
-    font-size: 26px;
-    color: #22A39F;
-    margin: 5px 0;
-}
-
-.bottom {
-    width: 1300px;
     display: flex;
     justify-content: space-between;
     position: relative;
-    margin-top: 130px;
-    margin-bottom: 100px;
-
+    text-transform: capitalize;
+    font-size: 1.6rem;
 }
 
-.bottom::after {
-    content: '家乡风景';
-    position: absolute;
-    top: -90px;
-    width: 100%;
+.shell-intro-info,
+.shell-intro-hobby {
+    width: 300px;
+    height: 300px;
+    display: block;
+    justify-content: space-between;
+}
+
+.shell-intro-hobby {
+    transform: translateX(100px);
+}
+
+.shell-intro ul li {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    color: var(--textColor);
+    text-align: right;
+    padding: 1.1rem 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+
+
+.shell-hometown {
+    width: 90%;
+    display: block;
+}
+
+.shell-hometown .title {
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+.shell-hometown .title .title-a {
+    position: relative;
     text-align: center;
     font: 300 40px 'font';
     font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+    margin-left: 50%;
 }
 
-.bottom img {
-    width: 23%;
-    height: 300px;
+.shell-footer {
+    text-align: center;
+    color: black;
+    font-size: 20px;
+    padding-top: 20px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+.shell-hometown-bar {
+    position: relative;
+    width: 1200px;
+    height: 700px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.shell-hometown-bar ul {
+    position: absolute;
+    left: 0;
+    width: 600%;
+    height: 700px;
+}
+
+.shell-hometown-bar ul li {
+    float: left;
+}
+
+.shell-hometown-bar ul li img {
+    width: 1200px;
+    height: 700px;
+}
+
+.shell-hometown-bar .left {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, .5);
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.shell-hometown-bar .right {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, .5);
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.shell-hometown-bar ol {
+    position: absolute;
+    bottom: 0;
+    /* 这里别给ol限制宽度，让小圆圈的个数自动把ol撑大 */
+    left: 50%;
+    transform: translateX(-50%);
+    height: 10%;
+    line-height: 10%;
+    text-align: center;
+}
+
+.shell-hometown-bar ol li {
+    float: left;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: 50%;
+    margin-left: 5px;
+}
+
+.shell-hometown-bar ol .current {
+    background-color: dodgerblue;
+}
+
+.shell-hometown-bar .left,
+.shell-hometown-bar .right,
+.shell-hometown-bar ol li {
+    cursor: pointer;
 }
