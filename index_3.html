@@ -2,22 +2,39 @@
 <html lang="en">
 
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>贾永建的个人网站</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
     <link rel="stylesheet" href="./css/all_3.css">
+    <!-- 页面 -->
     <link rel="stylesheet" href="./css/index_3.css">
+    <!-- 菜单列表 -->
     <link rel="stylesheet" href="./css/menu.css">
+    <!-- 导航栏 -->
     <link rel="stylesheet" href="./css/nav.css">
-    
+
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#info").click(function () {
+                $("#infolist").toggle(1000,"linear");
+            });
+            $("#hobby").click(function () {
+                $("#hobbylist").toggle();
+            });
+        });
+    </script>
 </head>
 
 <body>
+
     <!-- 导航栏 -->
     <nav>
         <ul class="nav-menu">
-            <li><a href="#" id="first">Our group</a></li>
+            <li><a href="#" id="first">Our Group</a></li>
             <li><a href="main.html">首页</a></li>
             <li><a href="index_1.html">吴晨辉</a></li>
             <li><a href="index_2.html">王晓楠</a></li>
@@ -25,50 +42,85 @@
         </ul>
     </nav>
 
-    <div class="shell">
 
-        <div class="video">
+
+    <div class="shell">
+        <div class="shell-main">
             <video autoplay loop muted>
                 <source src="./video/night.mp4" type="video/mp4">
                 <p>您的浏览器不支持video</p>
             </video>
+
+            <div class="topic"></div>
+
         </div>
-        <div class="main" id="base">
-            <section>
-                <div class="top">
-                    <div class="top-left">
-                        <p> 姓名：</p>
-                        贾永建<br /><br />
-                        <p>年龄：</p>
-                        21<br /><br />
-                        <p>家乡：</p>
-                        <a
-                            href="https://baike.baidu.com/item/%E6%9F%98%E5%9F%8E%E5%8E%BF/2607872?fr=aladdin">河南省商丘市柘城县<br /><br /></a>
 
-                    </div>
-                    <div class="top-middle">
-
-                    </div>
-                    <div class="top-right">
-                        <p>运动</p><br />
-                        羽毛球、乒乓球<br /><br />
-                        <p>喜欢的歌曲</p><br />
-                        For Riddles, for Wonders<br /><br />
-                        <audio controls loop>
-                            <source src="./music/For Riddles, for Wonders 几初的智愿.mp3" type="audio/mpeg">您的浏览器不支持audio元素
-                        </audio>
-                    </div>
+        <div class="shell-intro">
+            <div class="shell-intro-img"></div>
+            <div class="shell-intro-info">
+                <div class="title-info" id="info">
+                    <span><strong>个人信息</strong></span>
                 </div>
-            </section>
-        </div>
-        <div class="bottom">
-            <img src="./images/2.jpeg" alt="">
-            <img src="./images/3.jpeg" alt="">
-            <img src="./images/4.jpeg" alt="">
-            <img src="./images/5.jpeg" alt="">
+                <ul class="text-info" id="infolist">
+                    <li><strong>年龄 . . . . . . . </strong> 21</li>
+                    <li><strong>年级 . . . . . . .</strong> 2020级</li>
+                    <li><strong>班级 . . . . . . .</strong> 11702</li>
+                    <li><strong>籍贯 . . . . . . .</strong> 河南 商丘 柘城</li>
+                </ul>
+            </div>
+
+            <div class="shell-intro-hobby">
+                <div class="title-info" id="hobby">
+                    <span><strong>兴趣爱好</strong></span>
+                </div>
+                <ul class="text-info" id="hobbylist">
+                    <li><strong>运动 . . . . .</strong> 羽毛球、乒乓球</li>
+                    <li><strong>电影 . . . . .</strong> 天空之城</li>
+                    <li><strong>音乐 . . . . .</strong> 纯音乐、古风</li>
+                    <li>For Riddles, for Wonders <br>几初的智愿</li>
+                    <li> <audio loop controls style="height:20px;width: 150px;">
+                            <source src="./music/For Riddles, for Wonders 几初的智愿.mp3" type="audio/mpeg">
+                        </audio>
+                    </li>
+                </ul>
+            </div>
+
         </div>
 
+        <div class="shell-hometown">
+            <div class="title">
+                <a href="https://baike.baidu.com/item/%E6%9F%98%E5%9F%8E%E5%8E%BF/2607872?fr=aladdin" target="_blank"
+                    class="title-a">家乡</a>
+            </div>
+            <div class="shell-hometown-bar">
+                <ul class="slider">
+                    <li>
+                        <img src='./images/2.jpeg' />
+                    </li>
+                    <li>
+                        <img src='./images/3.jpeg' />
+                    </li>
+                    <li>
+                        <img src='./images/4.jpeg' />
+                    </li>
+                    <li>
+                        <img src='./images/5.jpeg' />
+                    </li>
+                </ul>
+                <!-- 左右按键 -->
+                <div class="left">&lt</div>
+                <div class="right">&gt</div>
+                <!-- 小圆圈 -->
+                <ol>
+                </ol>
+            </div>
+        </div>
+
+        <div class="shell-footer">
+            <span>2023.4.1 贾永建制作</span>
+        </div>
     </div>
+
     <!-- 侧边按钮部份 -->
     <div class="menu-box">
         <!-- 图标按钮 -->
@@ -85,8 +137,9 @@
             <li><i class="fa fa-sliders"></i><span><a href="#">回到顶部</a></span></li>
         </ul>
     </div>
-    <script src="js/menu.js" type="text/javascript"></script>
 
+    <script src="./js/menu.js" type="text/javascript"></script>
+    <script src="./js/轮播图.js"></script>
 </body>
 
 </html>
